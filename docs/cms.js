@@ -38,7 +38,7 @@ sidebar_position: ${document.order}
 
 ${document.content}`;
 
-        fs.writeFileSync(`${path}/${title}.md`, content, { encoding: "utf-8" });
+        fs.writeFileSync(`${path}/${document.slug}.md`, content, { encoding: "utf-8" });
     });
 })();
 

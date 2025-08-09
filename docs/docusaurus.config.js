@@ -16,15 +16,15 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'TowerOfSighs', // Usually your GitHub org/user name.
+  projectName: 'TowerDoc', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'zh',
+    locales: ['zh', 'en'],
   },
 
   presets: [
@@ -73,12 +73,15 @@ const config = {
             position: 'left',
             label: '书架',
           },
-          // {to: '/blog', label: 'Blog', position: 'left'},
-          // {
-          //   href: 'https://github.com/facebook/docusaurus',
-          //   label: 'GitHub',
-          //   position: 'right',
-          // },
+            {
+                type: 'localeDropdown',
+                position: 'right',
+            },
+          {
+            href: 'https://github.com/Tower-of-Sighs',
+            label: 'GitHub',
+            position: 'right',
+          },
         ],
       },
       footer: {

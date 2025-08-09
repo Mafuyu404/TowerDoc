@@ -57,7 +57,6 @@ for (let i = maxStack; i > 0; i--) {
 
     }
     function getRouteKey(category) {
-        console.log(category.link.slug)
         return category.link.slug.slice(1);
     }
 }

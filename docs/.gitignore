@@ -22,3 +22,5 @@ yarn-error.log*
 
 /lang
 .env
+route.json
+sidebars.json

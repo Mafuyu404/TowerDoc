@@ -127,7 +127,7 @@ const config = {
         //     ],
         //   },
         // ],
-        copyright: `Copyright © ${new Date().getFullYear()} Mafuyu404, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Tower of Sighs, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

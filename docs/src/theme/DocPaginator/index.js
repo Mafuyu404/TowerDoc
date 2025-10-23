@@ -12,22 +12,22 @@ export default function DocPaginatorWrapper(props) {
 
     return (
         <>
-            <DocPaginator {...props} />
-            <br/>
-            <Giscus
-                repo="Mafuyu404/TowerDoc"
-                repo-id="R_kgDOPHZCww"
-                category="General"
-                category-id="DIC_kwDOPHZCw84Cw-ho"
-                mapping='specific'
-                term={giscus_term}
-                reactionsEnabled='1'
-                emitMetadata='1'
-                inputPosition='top'
-                theme={colorMode}
-                lang='en'
-                loading="lazy"
-            />
+            {/*<DocPaginator {...props} />*/}
+            {/*<br/>*/}
+            {/*<Giscus*/}
+            {/*    repo="Mafuyu404/TowerDoc"*/}
+            {/*    repo-id="R_kgDOPHZCww"*/}
+            {/*    category="General"*/}
+            {/*    category-id="DIC_kwDOPHZCw84Cw-ho"*/}
+            {/*    mapping='specific'*/}
+            {/*    term={giscus_term}*/}
+            {/*    reactionsEnabled='1'*/}
+            {/*    emitMetadata='1'*/}
+            {/*    inputPosition='top'*/}
+            {/*    theme={colorMode}*/}
+            {/*    lang='en'*/}
+            {/*    loading="lazy"*/}
+            {/*/>*/}
         </>
     );
 }

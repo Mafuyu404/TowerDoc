@@ -24,7 +24,13 @@ const content = {
     fs.writeFileSync("./route.json", JSON.stringify(route), { encoding: "utf-8" });
 
     content.document.forEach((document, i) => {
-        let path = `./docs/${document.path}`.split("/");
+        let path;
+        if (document.path.startsWith("en/")) {
+            document.path = document.path.replace("en/", "");
+            path = `./i18n/en/docusaurus-plugin-content-docs/current/${document.path}`.split("/")
+        } else {
+            path = `./docs/${document.path}`.split("/");
+        }
         let title = path.pop();
         path = path.join("/");
         if (!fs.existsSync(path)) {
@@ -62,6 +68,7 @@ function parseToken() {
 function linkRoute(route) {
     const index = {};
     content.document.forEach(document => {
+        if (document.path.startsWith("en/")) return;
         if (!document.path.includes("/")) return;
         let path = document.path.split("/");
         path.pop();

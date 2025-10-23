@@ -24,3 +24,5 @@ yarn-error.log*
 .env
 route.json
 sidebars.json
+
+/i18n/en/docusaurus-plugin-content-docs/current

@@ -14,7 +14,7 @@ build:
     build:
       html:
         # Build the site
-        - cd docs/ && node readthedocs.js && npm run build
+        - cd docs/ && npm run build
     post_build:
       # Copy generated files into Read the Docs directory
       - mkdir --parents $READTHEDOCS_OUTPUT/html/

@@ -61,7 +61,7 @@ for (let i = maxStack; i > 0; i--) {
     }
 }
 
-sidebars.docs.splice(0, 0, { type: "doc", id: "intro", label: "索引" });
+sidebars.docs.splice(0, 0, { type: "doc", id: "README", label: "索引" });
 
 fs.writeFileSync("sidebars.json", JSON.stringify(sidebars));
 

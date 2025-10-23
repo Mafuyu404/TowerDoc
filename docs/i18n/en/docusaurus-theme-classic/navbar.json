@@ -1,0 +1,10 @@
+{
+  "title": {
+    "message": "Tower Library",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Sighs of Tower",
+    "description": "The alt text of navbar logo"
+  }
+}

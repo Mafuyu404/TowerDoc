@@ -1,32 +1,20 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+import {themes as prismThemes} from 'prism-react-renderer';
+const math = require('remark-math');
+const katex = require('rehype-katex');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '高塔书库',
-  tagline: '乱七八糟的书堆',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'Tower Library',
+  tagline: '教程, 开源, 免费, 示例, Tutorial',
+  url: 'https://doc.sighs.cc',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logo.png',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'TowerOfSighs', // Usually your GitHub org/user name.
-  projectName: 'TowerDoc', // Usually your repo name.
-
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: 'zh',
-    locales: ['zh', 'en'],
-  },
-
+  projectName: 'tower_library', // Usually your repo name.
   presets: [
     [
       'classic',
@@ -34,106 +22,143 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+		  sidebarCollapsed: false,
           // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/ruanqizhen/labview_book/edit/main/',
+		  routeBasePath: '/',
+		  path: './docs',
+		  remarkPlugins: [math],
+		  rehypePlugins: [katex],
+          editLocalizedFiles: true,
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+		blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+		sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+        },
+        gtag: {
+          trackingID: 'G-9EFRGQK2N0',
         },
       }),
     ],
   ],
 
-  themes: [
-    // [require.resolve("@easyops-cn/docusaurus-search-local"), ({ hashed: true })]
-  ],
-
-  themeConfig:
+  themeConfig: (
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
+    {
+	  docs: {
+        sidebar: {
+          hideable: true,
+        },
+      },
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: false,
+        respectPrefersColorScheme: true,
+      },
       navbar: {
+		hideOnScroll: true,
         title: '高塔书库',
         logo: {
-          alt: '高塔书库',
+          alt: 'Tower Library',
           src: 'img/logo.png',
+		  href: '/'
         },
         items: [
           {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: '书架',
-          },
-            {
-                type: 'localeDropdown',
-                position: 'right',
-            },
-          {
-            href: 'https://github.com/Tower-of-Sighs',
-            label: 'GitHub',
+            type: 'localeDropdown',
             position: 'right',
           },
         ],
       },
-      footer: {
-        style: 'dark',
-        // links: [
-        //   {
-        //     title: 'Docs',
-        //     items: [
-        //       {
-        //         label: 'Tutorial',
-        //         to: '/docs/intro',
-        //       },
-        //     ],
-        //   },
-        //   {
-        //     title: 'Community',
-        //     items: [
-        //       {
-        //         label: 'Stack Overflow',
-        //         href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-        //       },
-        //       {
-        //         label: 'Discord',
-        //         href: 'https://discordapp.com/invite/docusaurus',
-        //       },
-        //       {
-        //         label: 'Twitter',
-        //         href: 'https://twitter.com/docusaurus',
-        //       },
-        //     ],
-        //   },
-        //   {
-        //     title: 'More',
-        //     items: [
-        //       {
-        //         label: 'Blog',
-        //         to: '/blog',
-        //       },
-        //       {
-        //         label: 'GitHub',
-        //         href: 'https://github.com/facebook/docusaurus',
-        //       },
-        //     ],
-        //   },
-        // ],
-        copyright: `Copyright © ${new Date().getFullYear()} Tower of Sighs, Inc. Built with Docusaurus.`,
-      },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
       },
-    }),
+	  zoomSelector: '.markdown img',
+	  metadata: [
+		{name: 'keywords', content: 'LabVIEW, 编程, 经验, 教程, 开源, 免费, 电子书, 下载, PDF, 示例, Tutorial'},
+		{name: 'description', content: '《我和LabVIEW:一个NI工程师的十年编程经验》，是一本广受好评的的畅销书。介绍了各种控件，节点，结构的使用方法和编程模式，调试优化等高级功能。'},
+		{name: 'author', content: 'Qizhen Ruan 阮奇桢'},
+	  ],
+    }
+  ),
+  plugins: [
+    function baiduPlugin(context, options) {
+      return {
+        name: 'baidu-plugin',
+        injectHtmlTags({content}) {
+		  return {
+			postBodyTags: [`
+               <script type="text/javascript" src="https://hm.baidu.com/hm.js?b3f6e7ec9302021671173e3fad14f4cd"></script>
+               <script type="text/javascript">
+                 (function(c,l,a,r,i,t,y){
+                    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                 })(window, document, "clarity", "script", "jxmn1qjx88");
+               </script>
+                        `],
+		  };
+		},
+      };
+    },
+    function googleSiteName(context, options) {
+      return {
+        name: 'googleSiteName-plugin',
+        injectHtmlTags({content}) {
+		  return {
+			headTags: [`
+                <script type="application/ld+json">
+                {
+                  "@context" : "https://schema.org",
+                  "@type" : "WebSite",
+                  "name" : "LabVIEW Tutorial",
+                  "url" : "https://lv.qizhen.xyz"
+                }
+                </script>
+                        `],
+		  };
+		},
+      };
+    },
+	[
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        hashed: true,
+        language: ["en", "zh"],
+		docsRouteBasePath: "/",
+		highlightSearchTermsOnTargetPage: true,
+      },
+    ],
+    "./src/plugin/plugin-image-zoom",
+  ],
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
+  ],
+  i18n: {
+    defaultLocale: 'zh-cn',
+    locales: ['zh-cn', 'en'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+        direction: 'ltr',
+      },
+      'zh-cn':{
+        label: '中文',
+        direction: 'ltr',
+      },
+    },
+  },
 };
 
 module.exports = config;

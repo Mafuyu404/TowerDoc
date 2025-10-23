@@ -3,4 +3,19 @@
   command = "npm run build"
 
 [build.processing]
-  skip_processing = true
+  skip_processing = false
+[build.processing.css]
+  minify = false
+  bundle = false
+[build.processing.js]
+  minify = false
+  bundle = false
+
+[[plugins]]
+  package = "netlify-plugin-minify-html"
+
+  [plugins.inputs.minifierOptions]
+    collapseWhitespace = false
+    conservativeCollapse = false
+    minifyCSS = false
+    minifyJS = false

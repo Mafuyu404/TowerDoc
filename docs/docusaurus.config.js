@@ -22,14 +22,11 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-		  sidebarCollapsed: false,
-          // Please change this to your repo.
-          editUrl: 'https://github.com/ruanqizhen/labview_book/edit/main/',
+		  sidebarCollapsed: true,
 		  routeBasePath: '/',
 		  path: './docs',
 		  remarkPlugins: [math],
 		  rehypePlugins: [katex],
-          editLocalizedFiles: true,
         },
 		blog: false,
         theme: {

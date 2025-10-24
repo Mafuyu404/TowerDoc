@@ -10,7 +10,7 @@ const config = {
   title: 'Tower Library',
   tagline: '教程, 开源, 免费, 示例, Tutorial',
   url: 'https://doc.sighs.cc',
-  baseUrl: '/',
+  baseUrl: '/docs',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logo.png',

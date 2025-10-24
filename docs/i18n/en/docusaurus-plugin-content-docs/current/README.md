@@ -1,3 +1,6 @@
 # Index
+Here is Tower Library where team "Sighs Of Tower" publishes documents.
 
-Here is Tower Library.
+It's simple and untidy, and, just think it cute?
+
+Discord: https://discord.gg/ey6dcwJX

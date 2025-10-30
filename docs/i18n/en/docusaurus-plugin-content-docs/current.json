@@ -1,0 +1,98 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.docs.category.OneEnoughItem": {
+    "message": "OneEnoughItem",
+    "description": "The label for category OneEnoughItem in sidebar docs"
+  },
+  "sidebar.docs.category.相关项目": {
+    "message": "相关项目",
+    "description": "The label for category 相关项目 in sidebar docs"
+  },
+  "sidebar.docs.category.相关教程": {
+    "message": "相关教程",
+    "description": "The label for category 相关教程 in sidebar docs"
+  },
+  "sidebar.docs.category.通用意见反馈": {
+    "message": "通用意见反馈",
+    "description": "The label for category 通用意见反馈 in sidebar docs"
+  },
+  "sidebar.docs.category.OneEnoughFluid": {
+    "message": "OneEnoughFluid",
+    "description": "The label for category OneEnoughFluid in sidebar docs"
+  },
+  "sidebar.docs.category.FetchJS": {
+    "message": "FetchJS",
+    "description": "The label for category FetchJS in sidebar docs"
+  },
+  "sidebar.docs.category.OneEnoughBlock": {
+    "message": "OneEnoughBlock",
+    "description": "The label for category OneEnoughBlock in sidebar docs"
+  },
+  "sidebar.docs.category.灵活按键绑定": {
+    "message": "灵活按键绑定",
+    "description": "The label for category 灵活按键绑定 in sidebar docs"
+  },
+  "sidebar.docs.category.电波女仆": {
+    "message": "电波女仆",
+    "description": "The label for category 电波女仆 in sidebar docs"
+  },
+  "sidebar.docs.category.勤劳跟踪狂": {
+    "message": "勤劳跟踪狂",
+    "description": "The label for category 勤劳跟踪狂 in sidebar docs"
+  },
+  "sidebar.docs.category.TaCZaddon": {
+    "message": "TaCZaddon",
+    "description": "The label for category TaCZaddon in sidebar docs"
+  },
+  "sidebar.docs.category.Team": {
+    "message": "Team",
+    "description": "The label for category Team in sidebar docs"
+  },
+  "sidebar.docs.category.磨痕": {
+    "message": "磨痕",
+    "description": "The label for category 磨痕 in sidebar docs"
+  },
+  "sidebar.docs.category.随点随用": {
+    "message": "随点随用",
+    "description": "The label for category 随点随用 in sidebar docs"
+  },
+  "sidebar.docs.category.FlechazoDoc": {
+    "message": "FlechazoDoc",
+    "description": "The label for category FlechazoDoc in sidebar docs"
+  },
+  "sidebar.docs.category.OneEnoughLib": {
+    "message": "OneEnoughLib",
+    "description": "The label for category OneEnoughLib in sidebar docs"
+  },
+  "sidebar.docs.category.忆然的MOD": {
+    "message": "忆然的MOD",
+    "description": "The label for category 忆然的MOD in sidebar docs"
+  },
+  "sidebar.docs.category.瑞雪随想录": {
+    "message": "瑞雪随想录",
+    "description": "The label for category 瑞雪随想录 in sidebar docs"
+  },
+  "sidebar.docs.category.nf-docs": {
+    "message": "nf-docs",
+    "description": "The label for category nf-docs in sidebar docs"
+  },
+  "sidebar.docs.category.nf-docs/1.21": {
+    "message": "nf-docs/1.21",
+    "description": "The label for category nf-docs/1.21 in sidebar docs"
+  },
+  "sidebar.docs.category.FreeEpicGames": {
+    "message": "FreeEpicGames",
+    "description": "The label for category FreeEpicGames in sidebar docs"
+  },
+  "sidebar.docs.category.FreeEpicGames/Npc": {
+    "message": "FreeEpicGames/Npc",
+    "description": "The label for category FreeEpicGames/Npc in sidebar docs"
+  },
+  "sidebar.docs.doc.索引": {
+    "message": "索引",
+    "description": "The label for the doc item 索引 in sidebar docs, linking to the doc README"
+  }
+}
